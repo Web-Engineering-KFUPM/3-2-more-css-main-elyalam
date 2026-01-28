@@ -22,7 +22,7 @@
     /* .card {
       duplicate selector created again to add new styles.
     } */
-*/
+
 
 /*
   TODO 0: Link the style sheet using the link tag inside the head tag.
@@ -34,28 +34,65 @@
       2. Define --brand-dark variable and set a darker color value of #1d4ed8 for hover states
   - Apply a global box-sizing reset using the universal selector (hint use * selector).
 */
+:root {
+  --brand-variable: #2563eb;
+  --brand-dark-variable: #1d4ed8
+}
 
 /* TODO 2:
    - Give .site-header & .site-footer a subtle background using var(--card)
    - Make the .tagline class a bit muted (use var(--muted))
 */
+.site-header{
+  color: var(--card)
+}
+.site-footer{
+  color: var(--muted)
+}
 
 /* TODO 3:
    - Set the color to the brand variable and make the text bold for the .color-demo .color-note class.
    - Set the color to var(--muted) and the font size to 0.95rem for the .color-demo .muted class.
    - Style the .bg-sample class: Make the width of 100%, set a minimum height of 80px, add padding 0.75 rem and margin-block 0.75 rem, round the corners using border-radius, set the text color to white, and apply a 135-degree linear gradient background starting from the brand color and ending with a green tone like linear-gradient(135deg, var(--brand), #22c55e).
 */
+.color-demo.color-note {
+color: var(--brand-variable);
+}
+.color-demo.muted{
+color: var(--muted);
+font-size: 0.95rem;
+}
 
 /* TODO 4:
    - For the .inline-label class: make it behave like an inline-block element with small padding of 0.25rem and 0.5 rem and a border of width 1 px, type as solid line, and set color of value rgba(0, 0, 0, 0.18).
    - For the .inline-label.alt class: ensure it stays inline with others but use a different border style e.g. dashed.
 */
+.inline-label{
+#content{
+padding: 0.25rem 0.5rem;
+border: 2px dotted}
+}
+.inline-label.alt{
+border: 2px dashed red
+}
 
 /* TODO 5:
    - For the .copy .title class: choose any font-size (use rem), a font-weight between 600–700,
      and apply text-transform: capitalize.
    - For the .copy .intro class: set the font-style to italic and slightly increase the line-height and set the top margin of 0.25 rem.
 */
+.copy.title{
+ font-size: 2rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.copy.intro{
+  font-style: italic;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 110%;
+  margin-top: 0.25rem;
+}
 
 /* TODO 6:
    - For the .toolbar class: make it a flex container, distribute items with space-between,
@@ -65,10 +102,30 @@
      wrapping items using flex-wrap as wrap, adding a gap of 0.75rem, and top margin of 0.75rem.
    - For the .product-grid .item class: Make each item flexible with a flex grow of 1px, flex shrinnk of 1px, and minimum width of 140px, set a minimum height of 90px, apply a soft background and rounded corners, center the content using flexbox, and make the text bold e.g. 700.
 */
-
+.toolbar{
+  text-align: center;
+}
+.btn{
+  padding: 1px;
+  border: 1px;
+}
+.product-grid{
+display:flex
+}
+.product-grid.item{
+  flex-grow: 1px;
+  flex-shrink: 1px;
+  min-width: 140px;
+  min-height: 90px;
+}
 /* TODO 7:
   - .static-box: Add padding (0.5rem 0.75rem), round the corners (10px), apply a light gray background using rgba(0,0,0,0.05), and add bottom margin (0.5rem).
 */
+.static-box{
+  padding: 0.5rem 0.75rem;
+  background-color: 0,0,0,0.05;
+  margin-bottom: 0.5rem;
+}
 
 /* Base CSS (already provided for you).*/
 
